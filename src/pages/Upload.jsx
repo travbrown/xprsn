@@ -9,7 +9,13 @@ function Upload() {
       <header className="App-header">
         <ReactFilestack
           apikey={'AGr0VPFQWRAe5ldcfYSxiz'}
-          onSuccess={(res) => console.log(res)}
+          clientOptions={["image/*","video/*"]}
+          componentDisplayMode={{
+              type: 'button',
+              customText: 'Click here to open picker',
+              customClass: 'some-custom-class'
+          }}
+          
         />
       </header>
     </div>
