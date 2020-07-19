@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import './Home.css';
+import MenuIcon from '@material-ui/icons/Menu';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import AliceCarousel from 'react-alice-carousel';
@@ -26,7 +27,8 @@ function Home() {
       <body className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
-            <span style={{marginLeft:"5%", marginTop:"50px"}}>XPRSN</span>
+            <div style={{marginLeft:"5%", marginTop:"50px"}}>XPRSN</div>
+            <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
             {/** insert menu icon */}
           </div>
         </header>

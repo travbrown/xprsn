@@ -7,10 +7,9 @@
  font-size: 40px;
  justify-content: center;
 }
-.headerContainer{
-    margin-top: 3%;
-    margin-left: 7%;
-    z-index: 50%;
+.headerContainer{    
+    display: flex;
+    justify-content: space-between;
 }
 
 header{
