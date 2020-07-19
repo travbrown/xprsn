@@ -5,15 +5,27 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import './../App.css';
+import {  } from '@material-ui/icons';
+import './Home.css';
 
 function Home() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        Home
-      </header>
+      <body className="pageContent">
+        <header className="App-header">
+          <div className="headerTitle">
+            XPRSN
+          </div>
+        </header>
+        
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+      </body>
     </div>
   );
 }

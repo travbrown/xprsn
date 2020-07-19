@@ -1,0 +1,22 @@
+
+
+.App-header {
+ width: 100%;
+ min-height: 121px;
+ background-color: white;
+ font-family: 'Raleway', sans-serif;
+ font-size: 40px;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 100px 0 auto 30%;
+}
+
+.headerTitle{
+    z-index: 50;
+
+}
+
+
+
