@@ -8,20 +8,22 @@ import {
 } from "react-router-dom";
 import Upload from './pages/Upload';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/upload" component ={Upload} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
-      </header>
+      </div>
     </div>
   );
 }

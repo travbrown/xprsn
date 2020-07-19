@@ -2,20 +2,39 @@
 
 .App-header {
  width: 100%;
- min-height: 121px;
  background-color: white;
  font-family: 'Raleway', sans-serif;
  font-size: 40px;
+ justify-content: center;
 }
+
+header{
+    vertical-align: middle;
+}
+.sliderimg{
+    width: 600;
+    height: 600;
+    object-fit: cover
+  }
 
 body{
+    margin: 0;
     display: grid;
-    grid-template-rows: 100px 0 auto 30%;
+    grid-template-rows: 121px 0 auto 30%;
+}
+.socialMediaLinks{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-.headerTitle{
-    z-index: 50;
 
+.headerContainer{
+    display: inline;
+    content: "";
+    height: 100%;
+    vertical-align: -webkit-baseline-middle;
+    width: fit-content;
 }
 
 
