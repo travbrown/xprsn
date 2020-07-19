@@ -7,6 +7,11 @@
  font-size: 40px;
  justify-content: center;
 }
+.headerContainer{
+    margin-top: 3%;
+    margin-left: 7%;
+    z-index: 50%;
+}
 
 header{
     vertical-align: middle;
@@ -20,6 +25,7 @@ header{
 body{
     margin: 0;
     display: grid;
+    font-family: 'Raleway', sans-serif;
     grid-template-rows: 121px 0 auto 30%;
 }
 .socialMediaLinks{
@@ -28,14 +34,13 @@ body{
     justify-content: center;
 }
 
+.contactBTN a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 
-.headerContainer{
-    display: inline;
-    content: "";
-    height: 100%;
-    vertical-align: -webkit-baseline-middle;
-    width: fit-content;
 }
+
 
 
 

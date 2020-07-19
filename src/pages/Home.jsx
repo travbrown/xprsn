@@ -26,7 +26,7 @@ function Home() {
       <body className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
-            <span>XPRSN</span>
+            <span style={{marginLeft:"5%", marginTop:"50px"}}>XPRSN</span>
             {/** insert menu icon */}
           </div>
         </header>
@@ -51,8 +51,13 @@ function Home() {
           </AwesomeSlider> */}
         </main>
 
-        <footer>
-          <div>{/**Insert contact me button */}</div>
+        <footer style={{textAlign:"center", marginBottom:"10px"}}>
+          <div>{/**Insert contact me button */}
+            <a className="contactBTN">
+              <Link to="/contact">Contact Me</Link>
+            </a>
+            
+          </div>
           <div className="socialMediaLinks">
 
             <SocialMediaIconsReact 
@@ -63,7 +68,7 @@ function Home() {
               roundness="50%" 
               icon="github" 
               url="https://github.com/travbrown"/>
-              <div style={{width:"10px"}}></div>
+              <div style={{width:"15px"}}></div>
             <SocialMediaIconsReact 
               iconSize="6" 
               size="40" 
@@ -72,7 +77,7 @@ function Home() {
               roundness="50%" 
               icon="instagram" 
               url="https://instagram.com/_xprsv"/>
-              <div style={{width:"10px"}}></div>
+              <div style={{width:"15px"}}></div>
             <SocialMediaIconsReact 
               iconSize="6" 
               size="40" 
