@@ -10,6 +10,7 @@
 .headerContainer{    
     display: flex;
     justify-content: space-between;
+    margin: 3%;
 }
 
 header{

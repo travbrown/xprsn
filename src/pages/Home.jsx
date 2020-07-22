@@ -27,9 +27,8 @@ function Home() {
       <body className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
-            <div style={{marginLeft:"5%", marginTop:"50px"}}>XPRSN</div>
+            <div>XPRSN</div>
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
-            {/** insert menu icon */}
           </div>
         </header>
         
