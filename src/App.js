@@ -6,7 +6,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Upload from './pages/Upload';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import './App.css';
@@ -19,7 +18,6 @@ function App() {
        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/upload1" component = {Upload} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
