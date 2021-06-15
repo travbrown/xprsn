@@ -29,6 +29,7 @@ function Home() {
         </header>
         <nav></nav>
         <main>
+
         </main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
