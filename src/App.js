@@ -19,7 +19,7 @@ function App() {
        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/upload" component ={Upload} />
+            <Route exact path="/upload1" component = {Upload} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
