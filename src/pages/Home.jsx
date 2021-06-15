@@ -1,16 +1,24 @@
-import React from 'react';
-import {  } from '@material-ui/icons';
+import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
 import './Home.css';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 
 
 function Home() {
 
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+
+  const [images, setImages] = useState(importAll(require.context('../portfolio', false, /\.(png|jpe?g|svg)$/)));
+ 
   return (
       <body className="pageContent">
         <header className="App-header">
@@ -19,7 +27,7 @@ function Home() {
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
-        
+        <nav></nav>
         <main>
         </main>
 
@@ -29,7 +37,6 @@ function Home() {
               <Link to="/contact">Contact Me</Link>
             </a>
           </div>
-
           <div className="socialMediaLinks">
             <SocialMediaIconsReact 
               iconSize="6" 
