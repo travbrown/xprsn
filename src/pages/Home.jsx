@@ -10,14 +10,6 @@ import {SocialMediaIconsReact} from 'social-media-icons-react';
 
 
 function Home() {
-
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-  }
-
-  const [images, setImages] = useState(importAll(require.context('../portfolio', false, /\.(png|jpe?g|svg)$/)));
  
   return (
       <body className="pageContent">
