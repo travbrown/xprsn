@@ -1,20 +1,12 @@
 import React, {useState} from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 import './Home.css';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
-
-import AwesomeSlider from 'react-awesome-slider';
-import AwesomeSliderStyles from 'react-awesome-slider/src/styled/cube-animation.scss';
-
-import AliceCarousel from 'react-alice-carousel';
-import "react-alice-carousel/lib/alice-carousel.css";
 
 
 function Home() {
@@ -37,35 +29,7 @@ function Home() {
         </header>
         <nav></nav>
         <main>
-          {
-          /**
-          Insert Image Slider
-            - Make Awesome slider work
-            - else customize Alice Carousel
-          */
-          }
-
-          {
-          /*
-            <AliceCarousel autoPlay autoPlayInterval="3000">
-              <img src={image2} className="sliderimg"/>
-              <img src={image3} className="sliderimg"/>
-              <img src={image4} className="sliderimg"/>
-            </AliceCarousel>
-          */
-          }
-
-          <AwesomeSlider>
-            {images.items.map(image => (
-              <div>
-                <img
-                  src={`public/${image.key}`}
-                  width={400}
-                  height={400}
-                />
-              </div>
-            ))}
-          </AwesomeSlider>
+          
         </main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
