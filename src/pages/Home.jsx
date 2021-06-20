@@ -4,6 +4,9 @@ import {
   Link
 } from "react-router-dom";
 import './Home.css';
+import ReactDOM from 'react-dom';
+import GraphiQL from 'graphiql';
+import fetch from 'isomorphic-fetch';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
@@ -19,10 +22,10 @@ function Home() {
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
+        
         <nav></nav>
-        <main>
 
-        </main>
+        <main></main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
           <div>
