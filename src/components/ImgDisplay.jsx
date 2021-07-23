@@ -5,6 +5,10 @@ import firebase from 'firebase/app';
 import "firebase/storage";
 import sunset from "../portfolio/malik_profile.jpg";
 
+/** TODO:
+ * - acquire list of file in storage folders
+ * - create a running display of images
+ */
 
 export const ImgDisplay = (images) => { 
     const [url, setUrl] = useState('');
@@ -45,7 +49,6 @@ export const ImgDisplay = (images) => {
 
     }
 
- 
     return (
         <Container>
             {/* pass props in thru 'images' */}

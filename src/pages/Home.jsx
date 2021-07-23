@@ -10,7 +10,6 @@ import { Container } from '@material-ui/core';
 import { ImgDisplay } from '../components/ImgDisplay';
 
 function Home() {
-
   
   return (
     <Container>
