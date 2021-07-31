@@ -4,6 +4,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
     justify-content: center;
+    vertical-align: middle;
 }
 
 .headerContainer {
@@ -12,24 +13,23 @@
     margin: 3%;
 }
 
+
 img {
     max-width: 100%;
     height: auto;
   }
 
-header {
-    vertical-align: middle;
+
+
+main {
+    margin-bottom: 2.5rem;
 }
 
-.sliderimg{
-    width: 600;
-    height: 600;
-    object-fit: cover
-}
-
-body{
+.pageContent{
     margin: 0;
-    display: grid;
+    position: relative;
+    min-height: 100vh;
+    display:grid;
     font-family: 'Raleway', sans-serif;
     grid-template-rows: 121px 0 auto 30%;
 }
@@ -40,39 +40,17 @@ body{
     justify-content: center;
 }
 
-.aws-sld {
-    --cube-animation-duration: 675ms;
-    --cube-animation-perspective: 1800px;
-    --cube-animation-ease-in: cubic-bezier(0.8, 0, 1, 0.8);
-    --cube-animation-ease-out: cubic-bezier(0, 0.2, 0.2, 1);
-    --cube-translateZ-distance: -225px;
-}
-
-.aws-btn {
-    --slider-height-percentage: 63%;
-    --slider-transition-duration: 592ms;
-    --organic-arrow-thickness: 4px;
-    --organic-arrow-border-radius: 0px;
-    --organic-arrow-height: 40px;
-    --organic-arrow-color: #bcd926;
-    --control-button-width: 8%;
-    --control-button-height: 25%;
-    --control-button-background: transparent;
-    --control-bullet-color: #ddff2d;
-    --control-bullet-active-color: #bcd926;
-    --loader-bar-color: #851515;
-    --loader-bar-height: 2px;
-}
-
 .contactBTN a {
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
 
-footer {
+#footer {
     position: relative;
-    height: 2em;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
 }
 
 
