@@ -8,6 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 import { Container } from '@material-ui/core';
 import { ImgDisplay } from '../components/ImgDisplay';
+import { ListAllFiles } from '../components/ListAllFiles';
 
 function Home() {
   
@@ -20,10 +21,11 @@ function Home() {
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
-
-        <nav></nav>
-        <ImgDisplay></ImgDisplay>
-        <main></main>
+        {/* <nav></nav> */}
+        <main>
+          <ListAllFiles folder_name={'photography/'}/>
+          {/* <ImgDisplay imgFullPath={'photography/ccc.jpg'}/> */}
+        </main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
           <div>
