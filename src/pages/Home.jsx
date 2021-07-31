@@ -13,21 +13,21 @@ import { ListAllFiles } from '../components/ListAllFiles';
 function Home() {
   
   return (
-    <Container>
-      <body className="pageContent">
+    <Container className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
-            <div>XPRSN</div>
+            <div>XPRSV</div>
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
         {/* <nav></nav> */}
         <main>
+
           <ListAllFiles folder_name={'photography/'}/>
           {/* <ImgDisplay imgFullPath={'photography/ccc.jpg'}/> */}
         </main>
 
-        <footer style={{textAlign:"center", marginBottom:"10px"}}>
+        <footer id='footer' style={{textAlign:"center", marginBottom:"10px"}}>
           <div>
             <a className="contactBTN">
               <Link to="/contact">Contact Me</Link>
@@ -62,7 +62,6 @@ function Home() {
               url="https://linkedin.com/in/xprsn"/>
           </div>
         </footer>
-      </body>
     </Container>
   );
 }

@@ -36,9 +36,14 @@ export function ListAllFiles(folder_name){
     return (
         <Container>
             <tbody>
-                {listOfImgs.map(function(imgFullPath){
-                    return <ImgDisplay imgFullPath={imgFullPath}/>;
-                })}
+                
+                    {listOfImgs.map(function(imgFullPath){
+                        return (
+                            
+                                <ImgDisplay imgFullPath={imgFullPath}/>
+                            );
+                    })}
+                
             </tbody>
         </Container>
 
