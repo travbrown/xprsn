@@ -10,35 +10,32 @@ import sunset from "../portfolio/malik_profile.jpg";
  * - create a running display of images
  */
 
-export const ImgDisplay = (images) => { 
+export const ImgDisplay = (imgFullPath) => { 
     const [url, setUrl] = useState('');
 
     useEffect(()=>{
-        storageHandle();
+        storageHandle(imgFullPath.imgFullPath);
     },[]);
 
-    function storageHandle(){
+    function storageHandle(imgFullPath){
         const storage = firebase.storage();
-        const photographyRef = storage.ref('photography/ccc.jpg');
-        console.log('ref -->',photographyRef);
-        photographyRef.getDownloadURL()
-        .then((url) => {
-            // `url` is the download URL for 'images/stars.jpg'
-
-            // This can be downloaded directly:
-            console.log('We are here', url);
+        console.log(imgFullPath);
+        const imgRef = storage.ref(imgFullPath);
+        imgRef.getDownloadURL()
+        .then((imageUrl) => {
+            
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'blob';
             xhr.onload = (event) => {
             const blob = xhr.response;
             };
-            xhr.open('GET', url);
+            xhr.open('GET', imageUrl);
             xhr.send();
             // Or inserted into an <img> element
             const img = document.getElementById('myimg');
-            setUrl(url);
-            console.log('url:',url);
-            img.setAttribute('src', url);
+            setUrl(imageUrl);
+            // console.log('url:',url);
+            img.setAttribute('src', imageUrl);
             
 
         })
