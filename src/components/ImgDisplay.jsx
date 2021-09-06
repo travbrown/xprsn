@@ -3,7 +3,6 @@ import { Container} from '@material-ui/core';
 import { storage } from "../firebase";
 import firebase from 'firebase/app';
 import "firebase/storage";
-import sunset from "../portfolio/malik_profile.jpg";
 
 /** TODO:
  * - acquire list of file in storage folders
