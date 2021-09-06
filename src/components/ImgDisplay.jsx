@@ -12,9 +12,10 @@ import "firebase/storage";
 export const ImgDisplay = (imgFullPath) => { 
     const [url, setUrl] = useState('');
 
-    useEffect(()=>{
+    useEffect(() => {
         storageHandle(imgFullPath.imgFullPath);
     },[]);
+
 
     function storageHandle(imgFullPath){
         const storage = firebase.storage();
