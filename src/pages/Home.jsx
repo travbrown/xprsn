@@ -20,11 +20,9 @@ function Home() {
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
-        {/* <nav></nav> */}
+        
         <main>
-
           <ListAllFiles folder_name={'photography/'}/>
-          {/* <ImgDisplay imgFullPath={'photography/ccc.jpg'}/> */}
         </main>
 
         <footer id='footer' style={{textAlign:"center", marginBottom:"10px"}}>

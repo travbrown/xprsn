@@ -37,12 +37,12 @@ export function ListAllFiles(folder_name){
         <Container>
             <tbody>
                 
-                    {listOfImgs.map(function(imgFullPath){
-                        return (
-                            
-                                <ImgDisplay imgFullPath={imgFullPath}/>
-                            );
-                    })}
+                {listOfImgs.map(function(imgFullPath){
+                    return (
+                        
+                            <ImgDisplay imgFullPath={imgFullPath}/>
+                        );
+                })}
                 
             </tbody>
         </Container>
