@@ -1,25 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
 import './Home.css';
-
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
-
+import { Container } from '@material-ui/core';
+import { ImgDisplay } from '../components/ImgDisplay';
+import { ListAllFiles } from '../components/ListAllFiles';
 
 function Home() {
-
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-  }
-
-  const [images, setImages] = useState(importAll(require.context('../portfolio', false, /\.(png|jpe?g|svg)$/)));
- 
+  
   return (
+    <Container>
       <body className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
@@ -27,9 +21,10 @@ function Home() {
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
-        <nav></nav>
+        {/* <nav></nav> */}
         <main>
-
+          <ListAllFiles folder_name={'photography/'}/>
+          {/* <ImgDisplay imgFullPath={'photography/ccc.jpg'}/> */}
         </main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
@@ -68,6 +63,7 @@ function Home() {
           </div>
         </footer>
       </body>
+    </Container>
   );
 }
 

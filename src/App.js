@@ -10,6 +10,7 @@ import Upload from './pages/Upload';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import './App.css';
+import MediaContextProvider from './MediaContext';
 
 function App() {
 
@@ -18,9 +19,11 @@ function App() {
       <div className="App-header">
        <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/upload" component ={Upload} />
-            <Route exact path="/contact" component={Contact} />
+            <MediaContextProvider>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/upload" component ={Upload} />
+              <Route exact path="/contact" component={Contact} />
+            </MediaContextProvider>
           </Switch>
         </Router>
       </div>
