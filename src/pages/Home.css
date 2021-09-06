@@ -12,6 +12,11 @@
     margin: 3%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 header {
     vertical-align: middle;
 }
