@@ -22,7 +22,6 @@ function App() {
             <MediaContextProvider>
               <Route exact path="/" component={Home} />
               <Route exact path="/upload" component ={Upload} />
-              <Route exact path="/contact" component={Contact} />
             </MediaContextProvider>
           </Switch>
         </Router>
