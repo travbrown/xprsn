@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Link
@@ -7,7 +7,6 @@ import './Home.css';
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 import { Container } from '@material-ui/core';
-import { ImgDisplay } from '../components/ImgDisplay';
 import { ListAllFiles } from '../components/ListAllFiles';
 
 function Home() {

@@ -4,10 +4,6 @@ import { storage } from "../firebase";
 import firebase from 'firebase/app';
 import "firebase/storage";
 
-/** TODO:
- * - acquire list of file in storage folders
- * - create a running display of images
- */
 
 export const ImgDisplay = (imgFullPath) => { 
     const [url, setUrl] = useState('');
@@ -16,10 +12,8 @@ export const ImgDisplay = (imgFullPath) => {
         storageHandle(imgFullPath.imgFullPath);
     },[]);
 
-
     function storageHandle(imgFullPath){
         const storage = firebase.storage();
-        console.log(imgFullPath);
         const imgRef = storage.ref(imgFullPath);
         imgRef.getDownloadURL()
         .then((imageUrl) => {
@@ -36,20 +30,16 @@ export const ImgDisplay = (imgFullPath) => {
             setUrl(imageUrl);
             // console.log('url:',url);
             img.setAttribute('src', imageUrl);
-            
-
         })
         .catch((error) => {
             // Handle any errors
             console.log(error);
         });
-
     }
 
     return (
-        <Container>
-            {/* pass props in thru 'images' */}
+        <div>
             <img src={url}/>
-        </Container>
+        </div>
     );
 };
