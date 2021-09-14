@@ -6,7 +6,7 @@ import { Column } from './Column';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-export function ListAllFiles(folder_name){
+export function Gallery(folder_name){
 
     const [columnImage1, setColumnImage1] = useState([]);
     const [columnImage2, setColumnImage2] = useState([]);
@@ -28,7 +28,15 @@ export function ListAllFiles(folder_name){
         storageListAllFiles(folder_name.folder_name);
     },[]);
 
+    const shuffle = array => {  //this shuffles the songs and the artist pictures
+      for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    };
+
     function splitArrayEvenly(array, num_of_partitions) {
+        shuffle(array);
         array = array.slice();
       
         let result = [];
