@@ -28,11 +28,6 @@ function Home() {
         <main></main>
 
         <footer style={{textAlign:"center", marginBottom:"10px"}}>
-          <div>
-            <a className="contactBTN">
-              <Link to="/contact">Contact Me</Link>
-            </a>
-          </div>
           <div className="socialMediaLinks">
             <SocialMediaIconsReact 
               iconSize="6" 
