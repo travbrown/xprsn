@@ -11,7 +11,7 @@ import fetch from 'isomorphic-fetch';
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 import { Container } from '@material-ui/core';
-import { ListAllFiles } from '../components/ListAllFiles';
+import { Gallery } from '../components/Gallery';
 
 function Home() {
  
@@ -25,7 +25,7 @@ function Home() {
         </header>
         
         <main>
-          <ListAllFiles folder_name={'photography/'}/>
+          <Gallery folder_name={'photography/'}/>
         </main>
 
         <footer id='footer' style={{textAlign:"center", marginBottom:"10px"}}>
