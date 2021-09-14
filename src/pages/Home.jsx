@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Link
@@ -10,24 +10,25 @@ import fetch from 'isomorphic-fetch';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
-
+import { Container } from '@material-ui/core';
+import { ListAllFiles } from '../components/ListAllFiles';
 
 function Home() {
  
   return (
-      <body className="pageContent">
+    <Container className="pageContent">
         <header className="App-header">
           <div className="headerContainer">
-            <div>XPRSN</div>
+            <div>XPRSV</div>
             <MenuIcon style={{ fontSize: 50 }}></MenuIcon>
           </div>
         </header>
         
-        <nav></nav>
+        <main>
+          <ListAllFiles folder_name={'photography/'}/>
+        </main>
 
-        <main></main>
-
-        <footer style={{textAlign:"center", marginBottom:"10px"}}>
+        <footer id='footer' style={{textAlign:"center", marginBottom:"10px"}}>
           <div className="socialMediaLinks">
             <SocialMediaIconsReact 
               iconSize="6" 
@@ -57,7 +58,7 @@ function Home() {
               url="https://linkedin.com/in/xprsn"/>
           </div>
         </footer>
-      </body>
+    </Container>
   );
 }
 
