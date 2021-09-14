@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { Container} from '@material-ui/core';
 import { storage } from "../firebase";
 import firebase from 'firebase/app';
 import "firebase/storage";
@@ -9,10 +8,10 @@ export const ImgDisplay = (imgFullPath) => {
     const [url, setUrl] = useState('');
 
     useEffect(() => {
-        storageHandle(imgFullPath.imgFullPath);
+        getImageFromFirebase(imgFullPath.imgFullPath);
     },[]);
 
-    function storageHandle(imgFullPath){
+    function getImageFromFirebase(imgFullPath){
         const storage = firebase.storage();
         const imgRef = storage.ref(imgFullPath);
         imgRef.getDownloadURL()
@@ -38,8 +37,8 @@ export const ImgDisplay = (imgFullPath) => {
     }
 
     return (
-        <div>
+        <>
             <img src={url}/>
-        </div>
+        </>
     );
 };

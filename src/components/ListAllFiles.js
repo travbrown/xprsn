@@ -1,12 +1,10 @@
-import { Container } from '@material-ui/core';
-import React, {useState, useEffect, useContext } from 'react';
+import React, {useState, useEffect } from 'react';
 import { storage } from "../firebase";
-import { MediaContext } from '../MediaContext';
 import firebase from 'firebase/app';
 import "firebase/storage";
-import { ImgDisplay } from './ImgDisplay';
 import { Column } from './Column';
-
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 
 export function ListAllFiles(folder_name){
 
@@ -14,9 +12,17 @@ export function ListAllFiles(folder_name){
     const [columnImage2, setColumnImage2] = useState([]);
     const [columnImage3, setColumnImage3] = useState([]);
     
-    const [url, setUrl] = useState('');
-    const {fullImageFilePaths, setImgFilePaths} = useContext(MediaContext);
-
+    const useStyles = makeStyles(theme => ({
+        root: {
+          flexGrow: 1,
+        },
+        paper: {
+          padding: theme.spacing(2),
+          textAlign: 'center',
+          color: theme.palette.text.secondary,
+        },
+      }));
+    const classes = useStyles();
 
     useEffect(()=>{
         storageListAllFiles(folder_name.folder_name);
@@ -29,7 +35,6 @@ export function ListAllFiles(folder_name){
         while (array.length) {
           result.push(array.splice(0, Math.ceil(array.length / num_of_partitions--)));
         }
-        console.log(result);
         return result;
     }
 
@@ -62,14 +67,29 @@ export function ListAllFiles(folder_name){
         });
     }
 
+    const FormColumns = (imagesPaths) => {
+      return (
+        <React.Fragment>
+          <Grid item>
+              <Column columnImages={imagesPaths} />
+          </Grid>
+        </React.Fragment>
+      );
+    }
+  
     return (
-        <Container>
-            <tr>
-                <td> <Column columnImages={columnImage1} /> </td>
-                <td> <Column columnImages={columnImage2} /> </td>
-                <td> <Column columnImages={columnImage3} /> </td>
-            </tr>
-        </Container>
-
+      <div className={classes.root}>
+        <Grid container direction='row' justify='center' spacing={1}>
+          <Grid container item direction='column' lg={4} spacing={2}>
+            {FormColumns(columnImage1)}
+          </Grid>
+          <Grid container item direction='column' lg={4} spacing={2}>
+            {FormColumns(columnImage2)}
+          </Grid>
+          <Grid container item direction='column' lg={4} spacing={2}>
+            {FormColumns(columnImage3)}
+          </Grid>
+        </Grid>
+      </div>
     );
-}
+  }

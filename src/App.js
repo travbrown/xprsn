@@ -10,6 +10,7 @@ import Upload from './pages/Upload';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MediaContextProvider from './MediaContext';
 
 function App() {
