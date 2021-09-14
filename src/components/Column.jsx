@@ -1,17 +1,30 @@
-import React, {useContext, useState, useEffect}  from 'react';
+import React from 'react';
 import { ImgDisplay } from './ImgDisplay';
-import { MediaContext } from '../MediaContext';
-
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
 
 export function Column(prop){
-    const {fullImageFilePaths} = useContext(MediaContext);
+
+    const useStyles = makeStyles(theme => ({
+        root: {
+          flexGrow: 1,
+        },
+        paper: {
+          padding: theme.spacing(2),
+          textAlign: 'center',
+          color: theme.palette.text.secondary,
+        },
+      }));
+    const classes = useStyles();
 
     return(
         <>
             {prop.columnImages.map(function(imgFullPath){
                 return (
-                    <ImgDisplay imgFullPath={imgFullPath}/>
+                    <Paper className={classes.paper}>
+                        <ImgDisplay imgFullPath={imgFullPath}/>
+                    </Paper>
                 );
             })}
         </>
