@@ -7,7 +7,6 @@ import {
   Link
 } from "react-router-dom";
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
        <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/contact" component={Contact} />
           </Switch>
         </Router>
       </div>
