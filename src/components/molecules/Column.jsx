@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImgDisplay } from './ImgDisplay';
+import { ImgDisplay } from '../atoms/ImgDisplay';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 

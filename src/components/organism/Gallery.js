@@ -1,8 +1,8 @@
 import React, {useState, useEffect } from 'react';
-import { storage } from "../firebase";
+import { storage } from "../../firebase";
 import firebase from 'firebase/app';
 import "firebase/storage";
-import { Column } from './Column';
+import { Column } from '../molecules/Column';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
