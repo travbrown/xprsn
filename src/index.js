@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { ChakraProvider } from '@chakra-ui/react';
 import WebFont from 'webfontloader';
 import {SocialMediaIconsReact} from 'social-media-icons-react';
 
@@ -13,20 +14,13 @@ WebFont.load({
     families: ['Raleway:700', 'sans-serif']
   }
 });
-ReactDOM.render(
-  <>
-    <SocialMediaIconsReact icon="linkedin" url="https://linkedin.com/in/xprsn"/>
-    <SocialMediaIconsReact icon="instagram" url="https://instagram.com/_xprsv"/>
-    <SocialMediaIconsReact icon="github" url="https://github.com/travbrown"/>
-  </>,	
-  document.getElementById('root')
-);
-
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ChakraProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ChakraProvider>,
   document.getElementById('root')
 );
 
