@@ -4,11 +4,11 @@ import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
-import '../styles/Home.css';
+import '../styles/Art.css';
 import { Container } from '@material-ui/core';
 import { Gallery } from '../components/organism/Gallery';
 
-function Home() {
+function Art() {
  
   return (
     <Container className="pageContent">
@@ -17,6 +17,7 @@ function Home() {
         {/* <Body></Body> */}
         <main>
           <Gallery folder_name={'photography/'}/>
+          {/* Can't call images from firebase anymore, change to cloudinary */}
 
         </main>
         
@@ -25,4 +26,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Art;
