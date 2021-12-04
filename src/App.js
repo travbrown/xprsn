@@ -6,10 +6,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Upload from './pages/Upload';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MediaContextProvider from './MediaContext';
 
 function App() {
@@ -19,11 +18,7 @@ function App() {
       <div className="App-header">
        <Router>
           <Switch>
-            <MediaContextProvider>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/upload" component ={Upload} />
-              <Route exact path="/contact" component={Contact} />
-            </MediaContextProvider>
+            <Route exact path="/" component={Home} />
           </Switch>
         </Router>
       </div>
