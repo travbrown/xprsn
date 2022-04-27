@@ -1,5 +1,6 @@
 {
   "name": "xprsn",
+  "homepage": "https://travbrown.github.io/xprsn/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,14 +12,12 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^5.1.0",
     "filestack-react": "^3.1.0",
-
+    "firebase": "^8.8.0",
+    "gh-pages": "^3.2.3",
     "graphiql": "^1.4.2",
     "graphql": "^15.5.0",
     "heroku": "^7.54.1",
     "isomorphic-fetch": "^3.0.0",
-    "react": "^16.14.0",
-    "heroku": "^7.54.1",
-    "firebase": "^8.8.0",
     "react": "^16.13.1",
     "react-alice-carousel": "^1.19.3",
     "react-awesome-slider": "^4.1.0",
@@ -30,6 +29,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
