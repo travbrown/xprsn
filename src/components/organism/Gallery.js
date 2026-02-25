@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/storage';
+import '../../firebase'; // ensures initializeApp runs before storage calls
 import { Column } from '../molecules/Column';
 
 export function Gallery({ folder_name }) {
