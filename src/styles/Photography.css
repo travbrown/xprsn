@@ -1,0 +1,20 @@
+.photography-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0a;
+}
+
+.photography-main {
+  flex: 1;
+  padding: 24px 32px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .photography-main {
+    padding: 16px 12px 40px;
+  }
+}

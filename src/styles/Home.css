@@ -1,57 +1,82 @@
-.App-header {
-    width: 100%;
-    background-color: white;
-    font-family: 'Raleway', sans-serif;
-    font-size: 40px;
-    justify-content: center;
-    vertical-align: middle;
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
 }
 
-.headerContainer {
-    display: flex;
-    justify-content: space-between;
-    margin: 3%;
+/* Hero */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  text-align: center;
 }
 
-/* Send to ImgDisplay.css */
-img {
-    max-width: 100%;
-    height: auto;
-  } 
-
-
-
-main {
-    margin-bottom: 2.5rem;
+.hero-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 10vw, 7rem);
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  margin: 0 0 24px;
 }
 
-.pageContent{
-    margin: 0;
-    position: relative;
-    min-height: 100vh;
-    display:grid;
-    font-family: 'Raleway', sans-serif;
-    grid-template-rows: 121px 0 auto 30%;
+.hero-tagline {
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #555;
+  max-width: 480px;
+  margin: 0 0 48px;
+  line-height: 1.7;
 }
 
-.socialMediaLinks{
-    text-align: center;
-    display: flex;
-    justify-content: center;
+.hero-cta {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1.5px solid #1a1a1a;
+  color: #1a1a1a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contactBTN a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+.hero-cta:hover {
+  background-color: #1a1a1a;
+  color: #fafafa;
 }
 
-#footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
+/* About */
+.about {
+  padding: 80px 24px;
+  border-top: 1px solid #e0e0e0;
 }
 
+.about-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.about h2 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0 0 20px;
+}
 
+.about p {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}

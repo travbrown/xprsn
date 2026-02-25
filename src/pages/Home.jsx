@@ -1,33 +1,37 @@
 import React from 'react';
-import { Footer } from '../components/molecules/Footer';
+import { Link } from 'react-router-dom';
 import { Header } from '../components/molecules/Header';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Footer } from '../components/molecules/Footer';
 import '../styles/Home.css';
-import ReactDOM from 'react-dom';
-import GraphiQL from 'graphiql';
-import fetch from 'isomorphic-fetch';
-
-import MenuIcon from '@material-ui/icons/Menu';
-import {SocialMediaIconsReact} from 'social-media-icons-react';
-import { Container } from '@material-ui/core';
-import { Gallery } from '../components/organism/Gallery';
 
 function Home() {
- 
   return (
-    <Container className="pageContent">
-        <Header></Header>
+    <div className="home">
+      <Header />
 
-        {/* <Body></Body> */}
-        <main>
-          <Gallery folder_name={'photography/'}/>
-        </main>
-        
-        <Footer></Footer>
-    </Container>
+      <section className="hero">
+        <h1 className="hero-title">XPRSN</h1>
+        <p className="hero-tagline">
+          Capturing moments, moods, and meaning through a lens.
+        </p>
+        <Link to="/photography" className="hero-cta">
+          View Photography
+        </Link>
+      </section>
+
+      <section className="about">
+        <div className="about-inner">
+          <h2>About</h2>
+          <p>
+            XPRSN is a visual portfolio by Trav Brown — a space dedicated to
+            the art of seeing. Every frame is an expression, every shot a story
+            waiting to be felt.
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 }
 
