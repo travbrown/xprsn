@@ -1,40 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/storage';
-import '../../firebase'; // ensures initializeApp runs before storage calls
 import { Column } from '../molecules/Column';
+import imageIds from '../../data/images.json';
 
-export function Gallery({ folder_name }) {
+export function Gallery() {
   const [columns, setColumns] = useState([[], [], []]);
 
   useEffect(() => {
-    const allImages = [];
-    const storage = firebase.storage();
-    const folderRef = storage.ref(folder_name);
+    const allImages = [...imageIds];
 
-    folderRef.listAll()
-      .then((res) => {
-        res.items.forEach((itemRef) => {
-          allImages.push(itemRef.fullPath);
-        });
+    // Shuffle (Fisher-Yates)
+    for (let i = allImages.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
+    }
 
-        // Shuffle
-        for (let i = allImages.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [allImages[i], allImages[j]] = [allImages[j], allImages[i]];
-        }
-
-        // Split into 3 columns
-        const cols = [[], [], []];
-        allImages.forEach((img, i) => {
-          cols[i % 3].push(img);
-        });
-        setColumns(cols);
-      })
-      .catch((error) => {
-        console.log('Error loading images:', error);
-      });
-  }, [folder_name]);
+    // Split into 3 columns
+    const cols = [[], [], []];
+    allImages.forEach((img, i) => {
+      cols[i % 3].push(img);
+    });
+    setColumns(cols);
+  }, []);
 
   return (
     <div style={{
