@@ -1,12 +1,8 @@
 import React from 'react';
 import {useReducer, createContext } from 'react';
-import { storage } from "./firebase";
-import firebase from 'firebase/app';
-import "firebase/storage";
 
 let initialState = {
     fullImageFilePaths: [],
-    // mainRef: firebase.storage().ref(),
 };
 
 const reducer = (state, action) => {

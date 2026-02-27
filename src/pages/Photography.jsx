@@ -10,7 +10,7 @@ function Photography() {
       <Header dark />
 
       <main className="photography-main">
-        <Gallery folder_name="photography/" />
+        <Gallery />
       </main>
 
       <Footer dark />
