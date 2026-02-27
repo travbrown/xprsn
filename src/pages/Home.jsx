@@ -43,7 +43,7 @@ function Home() {
           <div className="about-inner">
             <h2>About</h2>
             <p>
-              XPRSV is a creative portfolio by Trav Brown — a space dedicated to
+              XPRSV (pronounced 'Expressive') is a creative portfolio by Trav Brown — a space dedicated to
               the art of seeing. Every frame is an expression, every shot a story
               waiting to be felt.
             </p>
