@@ -45,7 +45,7 @@ export const Footer = ({ dark }) => {
         marginBottom: '20px',
         flexWrap: 'wrap',
       }}>
-        <SocialLink href="https://instagram.com/_xprsv" label="Instagram" dark={dark} />
+        <SocialLink href="https://www.instagram.com/xprsn__" label="Instagram" dark={dark} />
         <SocialLink href="https://github.com/travbrown" label="GitHub" dark={dark} />
       </div>
       <p style={{
