@@ -1,8 +1,50 @@
 .home {
   min-height: 100vh;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Background video */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vh;
+  min-width: 120vw;
+  min-height: 120vh;
+  transform: translate(-50%, -50%);
+  border: 0;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content layer */
+.home-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
 }
 
 /* Hero */
@@ -21,35 +63,17 @@
   font-weight: 700;
   font-size: clamp(3rem, 10vw, 7rem);
   letter-spacing: 0.15em;
-  color: #1a1a1a;
+  color: #fff;
   margin: 0 0 24px;
 }
 
 .hero-tagline {
   font-weight: 300;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: #555;
+  color: rgba(255, 255, 255, 0.7);
   max-width: 480px;
   margin: 0 0 48px;
   line-height: 1.7;
-}
-
-.hero-cta {
-  display: inline-block;
-  padding: 14px 40px;
-  border: 1.5px solid #1a1a1a;
-  color: #1a1a1a;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.hero-cta:hover {
-  background-color: #1a1a1a;
-  color: #fafafa;
 }
 
 /* Domains */
@@ -68,29 +92,28 @@
   justify-content: center;
   width: 200px;
   height: 120px;
-  border: 1.5px solid #1a1a1a;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
 .domain-card--active {
   cursor: pointer;
-  color: #1a1a1a;
+  border-color: #fff;
 }
 
 .domain-card--active:hover {
-  background-color: #1a1a1a;
-  color: #fafafa;
+  background-color: #fff;
   transform: translateY(-2px);
 }
 
 .domain-card--active:hover .domain-name,
 .domain-card--active:hover .domain-desc {
-  color: #fafafa;
+  color: #000;
 }
 
 .domain-card--soon {
-  border-color: #ccc;
+  border-color: rgba(255, 255, 255, 0.25);
   cursor: default;
 }
 
@@ -99,12 +122,12 @@
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.1em;
-  color: #1a1a1a;
+  color: #fff;
   margin-bottom: 8px;
 }
 
 .domain-card--soon .domain-name {
-  color: #999;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .domain-desc {
@@ -113,17 +136,17 @@
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #777;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .domain-card--soon .domain-desc {
-  color: #bbb;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 /* About */
 .about {
   padding: 80px 24px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-inner {
@@ -137,14 +160,14 @@
   font-size: 1.1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #1a1a1a;
+  color: #fff;
   margin: 0 0 20px;
 }
 
 .about p {
   font-weight: 300;
   font-size: 1rem;
-  color: #555;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.8;
   margin: 0;
 }
