@@ -32,6 +32,7 @@ function Films() {
                 src={`https://img.youtube.com/vi/${film.id}/maxresdefault.jpg`}
                 alt={film.title}
                 className="film-card__thumb"
+                onError={(e) => { e.target.onerror = null; e.target.src = `https://img.youtube.com/vi/${film.id}/hqdefault.jpg`; }}
               />
               <div className="film-card__overlay">
                 <span className="film-card__title">{film.title}</span>
