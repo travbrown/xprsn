@@ -36,6 +36,17 @@ export const Header = ({ dark }) => {
         }}>
           Photography
         </Link>
+        <Link to="/films" style={{
+          fontFamily: "'Raleway', sans-serif",
+          fontWeight: 400,
+          fontSize: '0.8rem',
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          color,
+          textDecoration: 'none',
+        }}>
+          Films
+        </Link>
       </nav>
     </header>
   );

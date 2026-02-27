@@ -33,10 +33,10 @@ function Home() {
             <span className="domain-name">xprsv.img</span>
             <span className="domain-desc">Photography</span>
           </Link>
-          <div className="domain-card domain-card--soon">
+          <Link to="/films" className="domain-card domain-card--active">
             <span className="domain-name">xprsv.film</span>
-            <span className="domain-desc">Coming Soon</span>
-          </div>
+            <span className="domain-desc">Film</span>
+          </Link>
         </section>
 
         <section className="about">
