@@ -47,7 +47,7 @@ export const Footer = ({ dark }) => {
       }}>
         <SocialLink href="https://instagram.com/_xprsv" label="Instagram" dark={dark} />
         <SocialLink href="https://x.com" label="X" dark={dark} />
-        <SocialLink href="https://linkedin.com/in/xprsn" label="LinkedIn" dark={dark} />
+        <SocialLink href="https://linkedin.com/in/xprsv" label="LinkedIn" dark={dark} />
         <SocialLink href="https://github.com/travbrown" label="GitHub" dark={dark} />
       </div>
       <p style={{
@@ -58,7 +58,7 @@ export const Footer = ({ dark }) => {
         color: textColor,
         margin: 0,
       }}>
-        &copy; {new Date().getFullYear()} XPRSN
+        &copy; {new Date().getFullYear()} XPRSV
       </p>
     </footer>
   );

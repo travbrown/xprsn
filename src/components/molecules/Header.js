@@ -21,7 +21,7 @@ export const Header = ({ dark }) => {
         color,
         textDecoration: 'none',
       }}>
-        XPRSN
+        XPRSV
       </Link>
 
       <nav style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
