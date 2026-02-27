@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/ImgDisplay.css';
 
-const CLOUD_NAME = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || 'xprsn';
+const CLOUD_NAME = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || 'xprsv';
 
 export const ImgDisplay = ({ imgFullPath }) => {
   const [loaded, setLoaded] = useState(false);
